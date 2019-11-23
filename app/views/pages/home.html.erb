@@ -59,8 +59,8 @@
       <div class="list-item is-size-5">
         <div class="columns" v-for="item in items">
           <div class="column is-1 type has-text-centered">
-            <i class="far fa-minus-square has-text-danger" v-if="item.expense_type == '-'"></i>
-            <i class="far fa-plus-square has-text-success" v-if="item.expense_type == '+'"></i>
+            <i class="fa fa-minus-square-o has-text-danger" v-if="item.expense_type == '-'"></i>
+            <i class="fa fa-plus-square-o has-text-success" v-if="item.expense_type == '+'"></i>
           </div>
 
           <div class="column is-7 item">{{ item.title }}</div>
@@ -68,10 +68,10 @@
 
           <div class="column is-2 icon">
             <a href="#" class="has-text-primary">
-              <i class="far fa-edit"></i>
+              <i class="fa fa-pencil-square-o"></i>
             </a>
             <a href="#" class="has-text-primary">
-              <i class="far fa-trash-alt"></i>
+              <i class="fa fa-trash"></i>
             </a>
           </div>
         </div>

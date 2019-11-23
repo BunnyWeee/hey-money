@@ -36,7 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault()
 
         let item = {
-          id: 3, 
           expense_type: this.expense_type, 
           title: this.title, 
           amount: this.amount, 
