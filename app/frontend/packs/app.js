@@ -1,4 +1,5 @@
 import Vue from 'vue/dist/vue.esm.js'
+import ax from 'helpers/ax'
 
 document.addEventListener('DOMContentLoaded', () => {
   new Vue({
@@ -41,8 +42,14 @@ document.addEventListener('DOMContentLoaded', () => {
           amount: this.amount, 
           description: this.description
         }
+
         this.items.unshift(item)
-        this.clear()
+        // 打 api 
+        ax.post('/api/money', item)
+            .then(function(response){
+               console.log(response.date)
+               this.clear()
+            })
       }
     }
   })

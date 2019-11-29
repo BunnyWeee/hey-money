@@ -11,6 +11,9 @@ require("channels")
 // import '../css/application.scss'
 // 可改成
 import '../css'
+// require("stylesheets")
+// require("javascripts")
+// require("./app.js")
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
