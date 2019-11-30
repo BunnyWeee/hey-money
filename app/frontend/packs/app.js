@@ -35,8 +35,8 @@ document.addEventListener('DOMContentLoaded', () => {
         this.description = ''
       }, 
 
-      addItem() {
-        // event.preventDefault()
+      addItem(event) {
+        event.preventDefault()
 
         let newItem = {
           expense_type: this.expense_type, 
