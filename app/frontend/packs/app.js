@@ -35,9 +35,8 @@ document.addEventListener('DOMContentLoaded', () => {
         this.description = ''
       }, 
 
-      addItem(event) {
-        event.preventDefault()
-
+      addItem() {
+        // event.preventDefault()
         let newItem = {
           expense_type: this.expense_type, 
           title: this.title, 
@@ -48,8 +47,8 @@ document.addEventListener('DOMContentLoaded', () => {
         this.items.unshift(newItem)
         // 打 api 
         ax.post('/api/money', newItem)
-            .then(function(response){
-               console.log(response.date)
+            .then(response => {
+               console.log(response.data)
                this.clear()
             })
       }
