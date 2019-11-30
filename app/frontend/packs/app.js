@@ -2,9 +2,11 @@ import Vue from 'vue/dist/vue.esm.js'
 import ax from 'helpers/ax'
 
 document.addEventListener('DOMContentLoaded', () => {
-  new Vue({
+  const app = new Vue({
     el: "#app", 
+
     data: {
+      id: 0,
       expense_type: '-',
       title: '', 
       amount: '', 
@@ -33,19 +35,19 @@ document.addEventListener('DOMContentLoaded', () => {
         this.description = ''
       }, 
 
-      addItem(event) {
-        event.preventDefault()
+      addItem() {
+        // event.preventDefault()
 
-        let item = {
+        let newItem = {
           expense_type: this.expense_type, 
           title: this.title, 
           amount: this.amount, 
           description: this.description
         }
 
-        this.items.unshift(item)
+        this.items.unshift(newItem)
         // 打 api 
-        ax.post('/api/money', item)
+        ax.post('/api/money', newItem)
             .then(function(response){
                console.log(response.date)
                this.clear()
