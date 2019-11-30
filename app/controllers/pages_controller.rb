@@ -1,6 +1,5 @@
 class PagesController < ApplicationController
-  def index
-    @money = Money.all
+  def home
   end
 
   def create
